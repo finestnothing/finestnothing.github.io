@@ -1,0 +1,11 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+.typewrite {
+    font-weight: bold;
+    color: #000;
+    text-shadow: 0 0 1px #000;
+    text-align: center;
+    font: normal 0.5em 'Fira Code', monospace;
+    text-decoration: none;
+}
