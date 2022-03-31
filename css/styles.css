@@ -32,31 +32,3 @@ div.intro > p {
     font: normal 2em 'Fira Code', monospace;
     padding: 10px;
 }
-
-/*
-Navbar Styling
-*/
-ul.nav {
-    background-color: #3D99CE;
-    text-align: center;
-    position: fixed;
-    padding-left: 0px;
-    padding-top: 0px;
-    width: 100%;
-    bottom: 0px;
-    margin: 0;
-    z-index: 1;
-}
-ul.nav > li {
-    display: inline-block;
-}
-ul.nav > li:hover {
-    background-color: #2779BF;
-}
-ul.nav > li > a {
-    color: white;
-    text-decoration: none;
-    font: normal 1em 'Fira Code', monospace;
-    display: block;
-    padding: 20px;
-}

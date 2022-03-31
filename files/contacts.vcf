@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Alec Resha
+N:Resha;Alec;;;
+X-PHONETIC-FIRST-NAME:9169905442
+EMAIL;TYPE=INTERNET;TYPE=WORK:alecresha1@gmail.com
+TEL;TYPE=CELL:(916) 990-5442
+item1.ADR:;Apt 318;3521 Stanford Rd;Fort Collins;CO;80525;US;3521 Stanford 
+ Rd\nApt 318\, Fort Collins\, CO 80525\nUS
+item1.X-ABLabel:
+item2.URL:https\://finestnothing.github.io/
+item2.X-ABLabel:PROFILE
+PHOTO:https://lh3.googleusercontent.com/contacts/AKUYANRkoDXFAO34Iu4eYKMdjL
+ dDaMYOFP4GV14RFG9f2cAYumjXpqZj
+CATEGORIES:myContacts
+END:VCARD

@@ -1,0 +1,32 @@
+/*
+Navbar Styling
+*/
+ul.nav {
+    background-color: #3D99CE;
+    text-align: center;
+    position: fixed;
+    padding-left: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    bottom: 0px;
+    margin: 0;
+    z-index: 1;
+}
+ul.nav > li {
+    display: inline-block;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+ul.nav > li:hover {
+    background-color: #2779BF;
+    transition: 0.3s;
+}
+ul.nav > li > a {
+    color: white;
+    text-decoration: none;
+    font: normal 1em 'Fira Code', monospace;
+    display: block;
+    padding: 15px;
+    padding: 0 auto;
+}

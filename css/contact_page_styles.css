@@ -1,12 +1,10 @@
 div.contact {
     width: 90%;
     background-color: #f2f2f2;
-    border-radius: 10px;
     position: absolute;
     top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    margin-left: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 div.contact > p {
@@ -21,4 +19,36 @@ div.contact > p {
 div.contact > p > a {
     text-decoration: underline;
     color: #000;
+}
+
+#name {
+    font: bold 2em 'Fira Code', monospace;
+}
+
+ul.contact_cards {
+    margin: 20px auto;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+}
+ul.contact_cards > li {
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+ul.contact_cards > li > a:hover {
+    background-color: #2779BF;
+    transition: 0.3s;
+}
+ul.contact_cards > li > a {
+    text-decoration: none;
+    color: #000;
+    font: normal 1em 'Fira Code', monospace;
+    padding: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+    width: 100%;
+    transition: 0.3s;
 }
