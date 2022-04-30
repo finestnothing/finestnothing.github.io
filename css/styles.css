@@ -3,6 +3,7 @@
 html, body {
     padding: 0;
     margin: 0;
+    font: normal 1em 'Fira Code', monospace;
 }
 
 body {
@@ -21,6 +22,7 @@ div.intro{
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    padding: 10px;
 }
 
 div.intro > p {
