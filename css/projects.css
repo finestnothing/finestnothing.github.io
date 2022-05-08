@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+.project_container {
+    width: 90%;
+    margin: 2% auto;
+    margin-bottom: 70px;
+    padding: 10px;
+    background-color: rgba(165, 165, 165, 0.082);
+    display: block;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.card {
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(200, 200, 200, 0.274);
+    display: none;
+}
+
+.card_title {
+    font: bold 1.5em 'Fira Code', monospace;
+    margin: 0;
+}
+
+.card_body {
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+    font: normal 1em 'Fira Code', monospace;
+}
+
+.collapsible {
+    width: 95%;
+    margin: 1px auto;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #3D99CE;
+    text-align: center;
+    display: block;
+    border: 1px solid rgba(165, 165, 165, 0.274);
+    transition: 0.2s;
+    font: normal 1em 'Fira Code', monospace;
+    color: #ffffff;
+}
+
+.collapsible:hover {
+    background-color: #2779BF;
+    transition: 0.2s;
+}
+
+.card_expanded {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font: normal 1em 'Fira Code', monospace;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.links_table {
+    width: 75%;
+    margin: 10px auto 0px auto;
+    padding: 0;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.links_table > tbody > tr > td > a {
+    text-decoration: none;
+    color: #ffffff;
+    font: italic 1em 'Fira Code', monospace;
+    margin: 2px 10px;
+    padding: 2px 8px;
+    background-color: #3D99CE;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.links_table > tbody > tr > td > a:hover {
+    background-color: #2779BF;
+    transition: 0.2s;
+    padding: 5px 15px;
+
+}
+
+img.thumbnail {
+    width: 300px;
+    height: 180px;
+}
+
+.card_text {
+    margin: 0;
+    margin-top: 10px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+    transition: 0.2s;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+    transition: 0.2s;
+  }

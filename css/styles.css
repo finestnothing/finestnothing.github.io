@@ -4,6 +4,12 @@ html, body {
     padding: 0;
     margin: 0;
     font: normal 1em 'Fira Code', monospace;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar{
+    display: none;
 }
 
 body {

@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Alec Resha - Projects</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/projects.css">
     </head>
     <body>
         <script id="replace_with_navbar" src="scripts/navbar.js"></script>
@@ -11,12 +12,190 @@
         #TODO Fill out "Projects" page.
         # Put projects in cards, with summary, links, and some sort of graphic if applicable
         -->
-        <div class="intro">
-            <p id="name">Work in Progress</p>
-            I am currently busy with my classes and senior project as well as work, but this page will contain more background on me. If you have any questions, please feel free to <a href = "contact.html">contact me</a>.
-            </br>
-            </br>
-            Most projects are already listed on my <a href = "resume_page.html">resume</a>, this page will be for more in-depth information on each of them, as well as graphics and links to the code.
+
+        <div id="btn_container">
+            <!--#TODO Use javascript to dynamically make buttons from classes?-->
+            <p>Buttons for filtering projects</p>
+            <button id="show_all" class="btn active" onclick="filterSelection('all')">Show all</button>
+            <button class="btn" onclick="filterSelection('ml')">Machine Learning</button>
+            <button class="btn" onclick="filterSelection('python')">Python</button>
+            <button class="btn" onclick="filterSelection('data')">Data-Processing</button>
+            <button class="btn" onclick="filterSelection('webdev')">WebDev</button>
         </div>
+
+        <div class="project_container">
+            <!--Beginning of Senior Project Card-->
+            <div class="card ml python data">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="thumbnail" src="files/senior_project_photo.png" alt="Result of ML model">
+                    </div>
+                    <div class="card_body">
+                        <h4 class="card_title">
+                            Traffic Light State Collection with AI Model - Senior Project
+                        </h4>
+                        <p class="card_text">
+                            Tasked with creating a non-invasive way to capture real-time traffic light data.
+                            My primary role was the training, evaluation, and implementation of a Machine Learning model that would run in near real-time (10+ fps).
+                            I also created a data pipeline for sending the results of the model to a database.
+                        </p>
+                    </div>
+                </div>
+                <div class="card_footer">
+                    <div class="card_expanded content">
+                        <p>
+                            Fall 2021 - Spring 2022
+                        </p>
+                        <p>
+                            Used YOLOV5 model, trained on multiple datasets
+                        </p>
+                        <p>
+                            Created supporting documentation for ML model and data pipeline
+                        </p>
+                        <p>
+                            Collaborated with team to ensure integration with other portions of the project
+                        </p>
+                    </div>
+                    <button type="button" class="collapsible">View More About This Project</button>
+                </div>
+                <table class="links_table">
+                    <tr>
+                        <td>
+                            <a href="https://github.com/PhaseSense/Phase-Sense" target="_blank">Github Repo</a>
+                        </td>
+                        <td>
+                            <a href="https://github.com/PhaseSense/Phase-Sense/tree/main/model_files/Yolo%20Files" target="_blank">Area of Focus</a>
+                        </td>
+                        <td>
+                            <a href="https://github.com/PhaseSense/Phase-Sense/blob/main/model_files/Yolo%20Files/main.py" target="_blank">Dataset ETL</a>
+                        </td>
+                        <td>
+                            <a href="https://github.com/PhaseSense/Phase-Sense/blob/main/model_files/Yolo%20Files/data_transform.py" target="_blank">Data Pipeline</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--End of Senior Project Card-->
+
+            <!--#TODO Add more projects-->
+            <!--Beginning of Portfolio Card-->
+            <div class="card webdev javascript">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="thumbnail" src="files/senior_project_photo.png" alt="Result of ML model">
+                    </div>
+                    <div class="card_body">
+                        <h4 class="card_title">
+                            Title
+                        </h4>
+                        <p class="card_text">
+                            Brief Description
+                        </p>
+                    </div>
+                </div>
+                <div class="card_footer">
+                    <div class="card_expanded content">
+                        <p>
+                            Time period
+                        </p>
+                        <p>
+                            Additional Information
+                        </p>
+                    </div>
+                    <button type="button" class="collapsible">View More About This Project</button>
+                </div>
+                <table class="links_table">
+                    <tr>
+                        <td>
+                            <a href="" target="_blank">Links</a>
+                        </td>
+                        <td>
+                            <a href="" target="_blank">Links</a>
+                        </td>
+                        <td>
+                            <a href="" target="_blank">Links</a>
+                        </td>
+                        <td>
+                            <a href="" target="_blank">Links</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--End of Portfolio Card-->
+
+        </div> <!-- end of project_container -->
+
+
+        <!--Script for dropdowns-->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.previousElementSibling;
+                    if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                        this.innerText = "View More About This Project";
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        this.innerText = "View Less About This Project";
+                    }
+                });
+            }
+        </script>
+
+        <!--Script for filtering projects-->
+        <script>
+            filterSelection("all")
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("card");
+                if (c == "all") c = "";
+
+                // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+            }
+
+            // Show filtered elements
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                    }
+                }
+            }
+
+            // Hide elements that are not selected
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current control button (highlight it)
+            var btnContainer = document.getElementById("btn_container");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
     </body>
 </html>
