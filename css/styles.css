@@ -40,3 +40,23 @@ div.intro > p {
     font: normal 2em 'Fira Code', monospace;
     padding: 10px;
 }
+
+.about {
+    width: 75%;
+    margin: 0 12.5%;
+    text-align: center;
+    background-color: rgba(165, 165, 165, 0.274);
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 10px;
+}
+
+#name {
+    font: Bold 2em 'Fira Code', monospace;
+}
+
+.about-text {
+    font: normal 1em 'Fira Code', monospace;
+}

@@ -5,7 +5,8 @@
     margin: 2% auto;
     margin-bottom: 70px;
     padding: 10px;
-    background-color: rgba(165, 165, 165, 0.082);
+    /* background-color: rgba(165, 165, 165, 0.082); */
+    background-color: #fff;
     display: block;
     height: 100%;
     overflow-y: auto;
@@ -35,7 +36,7 @@
 
 .collapsible {
     width: 95%;
-    margin: 1px auto;
+    margin: 2px auto;
     padding: 5px;
     border-radius: 10px;
     background-color: #3D99CE;
@@ -49,6 +50,7 @@
 
 .collapsible:hover {
     background-color: #2779BF;
+    width: calc(95% + 10px);
     transition: 0.2s;
 }
 
@@ -84,7 +86,7 @@
     color: #ffffff;
     font: italic 1em 'Fira Code', monospace;
     margin: 2px 10px;
-    padding: 2px 8px;
+    padding: 5px 8px;
     background-color: #3D99CE;
     border-radius: 10px;
     transition: 0.2s;
@@ -93,7 +95,7 @@
 .links_table > tbody > tr > td > a:hover {
     background-color: #2779BF;
     transition: 0.2s;
-    padding: 5px 15px;
+    padding: 5px 12px;
 
 }
 
@@ -122,18 +124,36 @@ p {
     border: none;
     outline: none;
     padding: 12px 16px;
-    background-color: #f1f1f1;
+    background-color: #3D99CE;
     cursor: pointer;
     transition: 0.2s;
-  }
-  
-  .btn:hover {
-    background-color: #ddd;
-    transition: 0.2s;
-  }
-  
-  .btn.active {
-    background-color: #666;
-    color: white;
-    transition: 0.2s;
-  }
+    font: normal 1em 'Fira Code', monospace;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn:hover {
+background-color: #2779BF;
+transition: 0.2s;
+}
+
+.btn.active {
+background-color: #666;
+transition: 0.2s;
+}
+
+#btn_container {
+    width: 100%;
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #3D99CE;
+}
+
+#btn_container > p {
+    margin: 0;
+    font: bold 1.1em 'Fira Code', monospace;
+    color: #fff;
+}

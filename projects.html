@@ -15,7 +15,7 @@
 
         <div id="btn_container">
             <!--#TODO Use javascript to dynamically make buttons from classes?-->
-            <p>Buttons for filtering projects</p>
+            <p>Project Filters</p>
             <button id="show_all" class="btn active" onclick="filterSelection('all')">Show all</button>
             <button class="btn" onclick="filterSelection('ml')">Machine Learning</button>
             <button class="btn" onclick="filterSelection('python')">Python</button>
@@ -35,8 +35,7 @@
                             Traffic Light State Collection with AI Model - Senior Project
                         </h4>
                         <p class="card_text">
-                            Tasked with creating a non-invasive way to capture real-time traffic light data.
-                            My primary role was the training, evaluation, and implementation of a Machine Learning model that would run in near real-time (10+ fps).
+                            My primary role was the training, evaluation, and implementation of a Machine Learning model that would run in near real-time (10+ fps) to detect traffic lights and their states.
                             I also created a data pipeline for sending the results of the model to a database.
                         </p>
                     </div>
@@ -99,7 +98,11 @@
                             Last Updated: May 2022
                         </p>
                         <p>
+                            It runs in a docker container on a raspberry pi.
                             It is also hosted on github-pages in the event of the raspberrypi failing.
+                        </p>
+                        <p>
+                            I created this website to showcase my skills and projects.
                         </p>
                         <p>
                             Technologies: HTML, CSS, Javascript, Docker, Linux, SSH, Git/Github
@@ -123,8 +126,147 @@
             </div>
             <!--End of Portfolio Card-->
 
+            <!--Beginning of Card-->
+            <div class="card ml python">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="thumbnail" src="files/n_queens_photo.png" alt="N Queens Photo">
+                    </div>
+                    <div class="card_body">
+                        <h4 class="card_title">
+                            Solving N Queens Problem with DEAP
+                        </h4>
+                        <p class="card_text">
+                            Utilized the DEAP library to solve the N Queens Problem for a size of 8. Fitness, crossover, and mutation were used to create a genetic algorithm.
+                        </p>
+                    </div>
+                </div>
+                <div class="card_footer">
+                    <div class="card_expanded content">
+                        <p>
+                            Fall 2021
+                        </p>
+                        <p>
+                            Wrote a custom evafitness function to match this problem.
+                        </p>
+                        <p>
+                            Trained multiple generations with variations in population size, crossover, and mutation.
+                        </p>
+                    </div>
+                    <button type="button" class="collapsible">View More About This Project</button>
+                </div>
+                <table class="links_table">
+                    <tr>
+                        <td>
+                            <a href="https://github.com/finestnothing/notesRepo/tree/main/fall2021/CSc180/project4" target="_blank">Github Repo</a>
+                        </td>
+                        <td>
+                            <a href="https://github.com/finestnothing/notesRepo/blob/main/fall2021/CSc180/project4/project4report.pdf" target="_blank">Report</a>
+                        </td>
+                        <td>
+                            <a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle?oldformat=true" target="_blank">N Queens Problem</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--End of Card-->
+
+            <!--Beginning of Card-->
+            <div class="card ml tensorflow python data">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="thumbnail" src="files/yelp-logo-300x180.jpg" alt="yelp logo">
+                    </div>
+                    <div class="card_body">
+                        <h4 class="card_title">
+                            Using AI to Predict Business Review Ratings on Yelp
+                        </h4>
+                        <p class="card_text">
+                            Designed and trained ML model on dataset of Yelp business reviews to predict star rating of businesses based on text.
+                        </p>
+                    </div>
+                </div>
+                <div class="card_footer">
+                    <div class="card_expanded content">
+                        <p>
+                            Fall 2021
+                        </p>
+                        <p>
+                            Data was cleaned and prepared for training by creating a TFIDF Vectorizer which took the top 600 words between 1 and 2000 occurances. This was used to remove very commong words (such as "the", "and", "of", etc.) and focus on the more important words.
+                        </p>
+                        <p>
+                            100,000 reviews were used for training and testing the model, using a 75/25 train/test split.
+                        </p>
+                        <p>
+                            A Fully Connected Neural Network (FCN) model was built layer by layer.
+                            Approximately 20 variations were tested and compared, with the number of layers, nodes, and activation functions varied.
+                            These were then compared based on their RMSE score.
+                        </p>
+                        <p>
+                            Predicted vs Real star ratings was plotted using matplotlib.
+                        </p>
+                    </div>
+                    <button type="button" class="collapsible">View More About This Project</button>
+                </div>
+                <table class="links_table">
+                    <tr>
+                        <td>
+                            <a href="https://github.com/finestnothing/notesRepo/tree/main/fall2021/CSc180/Project1" target="_blank">Github Repo</a>
+                        </td>
+                        <td>
+                            <a href="files/CSc 180 - Intelligent Systems.pdf" target="_blank">Report</a>
+                        </td>
+                        <td>
+                            <a href="https://github.com/finestnothing/notesRepo/blob/main/fall2021/CSc180/Project1/180Project.ipynb" target="_blank">Code</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--End of Card-->
+
+            <!--Beginning of Card-->
+            <div class="card data python mysql">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="thumbnail" src="files/wildfire_analysis_photo.png" alt="Wildfire graphs">
+                    </div>
+                    <div class="card_body">
+                        <h4 class="card_title">
+                            California Wildfire Trend Analysis
+                        </h4>
+                        <p class="card_text">
+                            Analyzed trends and change over time in wildfire statistics in California using a MySQL database.
+                            Also cleaned and transformed data from a csv file to a MySQL database.
+                        </p>
+                    </div>
+                </div>
+                <div class="card_footer">
+                    <div class="card_expanded content">
+                        <p>
+                            Spring 2021
+                        </p>
+                        <p>
+                            Null values, wrong data types, and outliers were dropped.
+                            Values were plotted, separated by time.
+                        </p>
+                    </div>
+                    <button type="button" class="collapsible">View More About This Project</button>
+                </div>
+                <table class="links_table">
+                    <tr>
+                        <td>
+                            <a href="files/california_Fires_Analysis_Project.pdf" target="_blank">Report</a>
+                        </td>
+                        <td>
+                            <a href="https://gis.data.ca.gov/datasets/4fb94e78686d4932ac71bbe561e7cb9b_0/explore?location=37.358221%2C-119.381350%2C6.55" target="_blank">Data Source</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--End of Card-->
+
             <!--#TODO Add more projects-->
-            <!--Beginning of Portfolio Card-->
+            <!--Beginning of Card-->
             <div class="card">
                 <div class="card-horizontal">
                     <div class="img-square-wrapper">
@@ -167,7 +309,7 @@
                     </tr>
                 </table>
             </div>
-            <!--End of Portfolio Card-->
+            <!--End of Card-->
 
         </div> <!-- end of project_container -->
 
