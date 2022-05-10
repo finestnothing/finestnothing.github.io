@@ -51,6 +51,7 @@ div.intro > p {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     padding: 10px;
+    border-radius: 5px;
 }
 
 #name {
